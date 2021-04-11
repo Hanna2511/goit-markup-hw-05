@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>домашнее задание#4</title>
+    <title>домашнее задание#5</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/styles.css">
@@ -47,7 +47,7 @@
        <section class="hero">
            <div class="container">
            <h1 class="hero-title  hero-container"> Эффективные решения для вашего бизнеса</h1>
-           <button type="button" class="knob hero-container">Заказать услугу </button>
+           <button type="button" class="knob hero-container" data-modal-open >Заказать услугу </button>
         </div>
         
        </section>
@@ -80,9 +80,15 @@
             <div class="container">
                <h2 class="section-title"> Чем мы занимаемся</h2>
                 <ul class="list grid-img">
-                <li class="grid-foto"> <img src="./images/img.jpg" alt="печает" width="370" > </li>
-                <li class="grid-foto"><img src="./images/img1.jpg" alt="телефон" width="370"></li>
-                <li class="grid-foto"><img src="./images/img2.jpg" alt="планшет" width="370"></li>
+                <li class="grid-foto"> <img src="./images/img.jpg" alt="печает" width="370" > 
+                <p class="grid-foto-text"> Десктопные приложения</p>
+                </li>
+                <li class="grid-foto"><img src="./images/img1.jpg" alt="телефон" width="370">
+                    <p class="grid-foto-text"> Мобильные приложения</p>
+                </li>
+                <li class="grid-foto"><img src="./images/img2.jpg" alt="планшет" width="370">
+                    <p class="grid-foto-text"> Дизайнерские решения</p>
+                </li>
             </ul> 
         </div>
         </section>
@@ -339,6 +345,19 @@
     </div>
 </div>
    </footer> 
+  
+   <div class="blackdrop is-hidden" data-modal>
+    <div class="modal">
+        <p></p>
+        <button class="btd-close" data-modal-close>
+            <svg width="11" height="11">
+                <use href="./images/icon/close.svg#icon-close"> </use>
+        </svg>
+        </button>
+    </div>
+</div>
+  
+<script src="./js/modal.js"></script> 
 </body>
 </html>
 
