@@ -78,6 +78,8 @@ height: 44px;
 border-radius:50%; 
 background-color: #FFFFFF;
 padding-bottom: 30px;
+transition-property: background-color;
+transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons-item{
     padding-bottom: 30px; 
@@ -88,14 +90,15 @@ padding-bottom: 30px;
     fill: #AFB1B8;
 }
 .social-icons-link:hover,
-.social-icons .icon:hover,
-.social-icons .icon:focus,
 .social-icons-link:focus  {
+    background-color:var(--accent-color);
+    
+}
+.social-icons :hover .icon,
+.social-icons :focus .icon {
     fill: var(--title-name-color);
     color: var(--title-name-color);
-    background-color:var(--accent-color);
 }
-
 .page {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
@@ -534,7 +537,6 @@ margin-right: 10px;
         position: absolute;
        right: 90px;
         bottom: 27px;
-        
         font-family: Roboto;
 font-style: normal;
 font-weight: bold;
@@ -773,42 +775,29 @@ flex-wrap: wrap;
     overflow: hidden;
     
 }
-.projects-link-foto::before {
-    display: inline-block;
+.projects-link-foto-text {
     position: absolute;
-    content: "";
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
-}
-
-.projects-link-foto:hover::before,
-.projects-link-foto-text:hover {
-    transform: translateY(0);
-}
-.projects-link:hover .projects-link-foto::before,
-.projects-link:hover .overlay .projects-link-foto-text {
-    transform: translateY(0);
-}
-
-.projects-link-foto-text{
-    display: inline-block;
-    position: absolute;
-    top: 63px;
-    left: 24px;
-    right: 24px;
+    min-height: 100%;
+    padding:63px 24px;
     font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 1.55;
-letter-spacing: 0.03em;
-color: var(--title-name-color);
-transform: translateY(135%);
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .projects-foto:hover .projects-link-foto-text,
+    .projects-foto:focus .projects-link-foto-text {
+    transform: translateY(0);
+    }
 
 
 .project-button {
@@ -836,7 +825,6 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: background-color, color, box-shadow, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
     }
     
 
@@ -850,7 +838,6 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color:var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    transform: ease-in;
   
 }
 
